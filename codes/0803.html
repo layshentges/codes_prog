@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: lightcyan;" > 
+
+    <center>
+    
+    <input id="numero" type="number" placeholder="Digite a temperatura"><br>
+    <input id="cf" type="radio" name="grupo">Celsius para Fahrenheit<br>
+    <input id="ck" type="radio" name="grupo" >Celsius para Kelvin<br>
+    <input id="kf" type="radio" name="grupo" >Kelvin para Fahrenheit<br>
+    <input id="kc" type="radio" name="grupo" >Kelvin para Celsius<br>
+    <input id="fc" type="radio" name="grupo" >Fahrenheit para Celsius<br>
+    <input id="fk" type="radio" name="grupo" >Fahrenheit para Kelvin<br><br>
+
+    <button onclick="calculo()">Calcular</button><br><br>
+
+    <p id="r">resultado</p>
+
+    </center>
+
+</body>
+</html>
+<script>
+
+    var campo = document.getElementById("numero");
+    var radioCF = document.getElementById("cf");
+    var radioCK = document.getElementById("ck");
+    var radioKF = document.getElementById("kf");
+    var radioKC = document.getElementById("kc");
+    var radioFC = document.getElementById("fc");
+    var radioFK = document.getElementById("fk");
+    var resultado = document.getElementById("r")
+    
+    function calculo(){
+        var temperatura = Number(campo.value)
+        if(radioCF.checked){
+            resultado.innerHTML = temperatura * 9/5+32 + "ºF"
+        }
+
+        else if(radioCK.checked){
+            resultado.innerHTML = temperatura+273.15 + "ºK"
+        }
+
+        else if(radioKF.checked){
+            resultado.innerHTML = (temperatura-273.15) * 9/5 + 32 + "ºF"
+        }
+
+        else if(radioKC.checked){
+            resultado.innerHTML = temperatura-273.15 + "ºC"
+        }
+
+        else if(radioFC.checked){
+            resultado.innerHTML = (temperatura-32) * 5/9 + "ºC"
+        }
+
+        else if(radioFK.checked){
+            resultado.innerHTML = (temperatura-32) * 5/9 + 273.15 + "ºK"
+        }
+
+        else{
+            alert("Você precisa selecionar uma opção")
+        }
+    }
+
+</script>
