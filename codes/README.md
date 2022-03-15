@@ -7,7 +7,7 @@
   * Nessa aula aprendemos a usar "var", "button", "function", "alert", "if" e "else".
 
 ## Aula 0803
-  * Nessa aula aprendemos a botar a escrito no centro, "input id", "document.getElementById", "radio".
+  * Nessa aula aprendemos a botar a escrita no centro, "input id", "document.getElementById", "radio".
 
 ## Aula 1003
   * Nessa aula aprendemos "while".
