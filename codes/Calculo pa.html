@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<button onclick = "calcAn()">Cálculo do An</button><br><br>
+<button onclick = "calcA1()">Cálculo do A1</button><br><br>
+<button onclick = "calcR()">Cálculo do R</button><br><br>
+<button onclick = "calcN()">Cálculo do N</button><br><br>
+
+<input type="date"><br><br>
+<input type="mail" placeholder= "Digite seu email"><br><br>
+<input type="password" placeholder="Digite sua senha"><br><br>
+<a href="https://static.portaldacidade.com/unsafe/https://s3.amazonaws.com/beltrao.portaldacidade.com/img/news/2021-09/todo-nicolas-cagezinho-quem-e-dianho-o-humorista-gaucho-sucesso-na-internet-614f6cd1cf2ce.jpg">Clique aqui para ser feliz</a>
+
+</body>
+</html>
+<script>
+    function calcAn(){
+        var a1 = Number(prompt("Digite o valor de a1"));
+        var n = Number(prompt("Digite o valor de n"));
+        var r = Number(prompt("Digite o valor de r"));
+        var an = a1 + (n-1) * r;
+        alert(an)
+    }
+
+    function calcA1(){
+        var an = Number(prompt("Digite o valor de an"));
+        var n = Number(prompt("Digite o valor de n"));
+        var r = Number(prompt("Digite o valor de r"));
+        var a1 = an - (n-1) * r;
+        alert(a1)
+    }
+
+    function calcR(){
+        var an = Number(prompt("Digite o valor de an"));
+        var n = Number(prompt("Digite o valor de n"));
+        var a1 = Number(prompt("Digite o valor de a1"));
+        var r = (an - a1)/(n-1);
+        alert(r)
+    }
+
+    function calcN(){
+        var an = Number(prompt("Digite o valor de an"));
+        var r = Number(prompt("Digite o valor de r"));
+        var a1 = Number(prompt("Digite o valor de a1"));
+        var n = 1 + ((an - a1) / r);
+        alert(n)
+    }
+
+
+
+</script>
